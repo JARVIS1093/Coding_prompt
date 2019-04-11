@@ -1,8 +1,3 @@
-add: 31
 color: blue
-harsh: 1
-ketki: 2
-size: 18
-wishlist:
-- world
-- peace
+count: 2
+size: 8

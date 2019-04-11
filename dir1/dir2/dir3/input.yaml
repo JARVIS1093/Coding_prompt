@@ -1,6 +1,1 @@
-fodo:
-  dishes:
-    priority: high
- 
-  laundry:
-    priority: low
+wishlist: ["car","pony"]

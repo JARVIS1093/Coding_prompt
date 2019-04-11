@@ -4,20 +4,21 @@ import yaml
 samefile=[]
 def checkdir(path,filename):
         p=path.split("/")
-        print("path is ",path)
-        print("filename is ",filename)
+#        print("path is ",path)
+ #       print("filename is ",filename)
       
         if (not os.path.exists(path+"/"+filename)):
-                return print(path+"/"+filename + "doesn't exits")
+#                print(path+"/"+filename + "doesn't exits")
+                return	
         else:
                 #print(len(p)-3)
                 newpath="/".join(p[1:len(p)-1])
-                print(newpath)
+  #              print(newpath)
                 checkdir("/"+newpath,filename)
               
-                print(path+"/"+filename+ " exists")
+   #             print(path+"/"+filename+ " exists")
                 samefile.append(path+"/"+filename)
-        print(samefile)
+    #    print(samefile)
 
 def merging(samefile):
         if len(samefile)>1:
@@ -74,7 +75,7 @@ filename=b[len(b)-1]
 #path="/".join(b[0:len(b)-1])
 prepend=os.getcwd()
 path=prepend+"/"+"/".join(b[0:len(b)-1])
-print("path is",path)
+#print("path is",path)
 checkdir(path,filename)
 merging(samefile)
 if ( os.path.exists(a)):
