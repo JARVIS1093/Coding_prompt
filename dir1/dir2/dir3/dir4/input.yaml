@@ -1,4 +1,7 @@
-wishlist:
-- car
-- pony
-- worldpeace
+todo:
+  dishes:
+    priority: low
+  laundry:
+    priority: low
+  vaccum:
+    priority: high

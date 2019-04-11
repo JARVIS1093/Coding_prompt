@@ -1,1 +1,5 @@
-wishlist: ["car","pony"]
+todo:
+   dishes:
+     priority: high
+   laundry:
+     priority: low
