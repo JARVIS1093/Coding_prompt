@@ -1,3 +1,6 @@
 color: blue
+add: 31
 size: 18
-wishlist: ["peace"]
+wishlist:
+- world
+

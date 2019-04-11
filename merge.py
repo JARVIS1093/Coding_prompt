@@ -1,14 +1,23 @@
 import os
+import sys
 import yaml
 samefile=[]
 def checkdir(path,filename):
-        p=path.split("/")      
+        p=path.split("/")
+        print("path is ",path)
+        print("filename is ",filename)
+      
         if (not os.path.exists(path+"/"+filename)):
-                return 
+                return print(path+"/"+filename + "doesn't exits")
         else:
+                #print(len(p)-3)
                 newpath="/".join(p[1:len(p)-1])
+                print(newpath)
                 checkdir("/"+newpath,filename)
+              
+                print(path+"/"+filename+ " exists")
                 samefile.append(path+"/"+filename)
+        print(samefile)
 
 def merging(samefile):
         if len(samefile)>1:
@@ -58,10 +67,14 @@ def mergedict(datamap1,datamap2):
                 datamap2[keys]=datamap1[keys]
         return datamap2
 
-a=input("Enter the file path")
+#a=input("Enter the file path")
+a= sys.argv[1]
 b=a.split("/")
 filename=b[len(b)-1]
-path="/home/bhavya/"+"/".join(b[0:len(b)-1])
+#path="/".join(b[0:len(b)-1])
+prepend=os.getcwd()
+path=prepend+"/"+"/".join(b[0:len(b)-1])
+print("path is",path)
 checkdir(path,filename)
 merging(samefile)
 if ( os.path.exists(a)):
