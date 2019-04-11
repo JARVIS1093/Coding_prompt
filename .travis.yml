@@ -4,4 +4,4 @@ python:
 install:
    - pip install pyaml
 script: 
-  - python merge.py ./dir1/dir2/dir3/dir4/input4.yaml
+  - python merge.py ./dir1/dir2/dir3/dir4/input.yaml
