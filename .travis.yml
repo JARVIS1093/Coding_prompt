@@ -1,0 +1,7 @@
+language: python
+python:
+  -  "3.6.5"
+install:
+   - pip install pyaml
+script: 
+  - python merge.py ./dir1/dir2/dir3/dir4/input4.yaml
